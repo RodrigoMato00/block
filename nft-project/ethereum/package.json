@@ -10,11 +10,34 @@
   "license": "ISC",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
+    "@nomiclabs/hardhat-etherscan": "^3.0.3",
     "hardhat": "^2.9.6"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.6.0",
     "dotenv": "^16.0.1",
     "ethers": "^5.6.7"
+  },
+  "extends": "solhint:recommended",
+  "rules": {
+    "compiler-version": [
+      "error",
+      "^0.8.0"
+    ],
+    "func-visibility": [
+      "warn",
+      {
+        "ignoreConstructors": true
+      }
+    ],
+    "no-empty-blocks": [
+      "off"
+    ],
+    "reason-string": [
+      "off"
+    ],
+    "not-rely-on-time": [
+      "off"
+    ]
   }
 }
